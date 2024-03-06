@@ -13,18 +13,18 @@
     <div class="bg">
         <div class="from-box">
             <div class="button-box">
-                <div class="btn"></div>
+                <div class="btn"> </div>
                 <button type="button" class="toggle-btn" onclick="login()">Log In</button>
                 <button type="button" class="toggle-btn" onclick="signup()">Sign Up</button>
             </div>
             
-            <form id="login" class="input-group">
+            <form id="login" class="input-group login">
                 <input type="email" class="input-field" placeholder="Enter Email Id" required>
                 <input type="text" class="input-field" placeholder="Enter Password" required>
                 <input type="checkbox" class="check-box"><span>Remember Possword</span>
                 <button type="submit" class="submit-btn">Login</button>
             </form>
-            <form id="signup" class="input-group">
+            <form id="signup" class="input-group signup">
                 <input type="text" class="input-field" placeholder="Enter Name" required>
                 <input type="email" class="input-field" placeholder="Enter Email Id" required>
                 <input type="text" class="input-field" placeholder="Enter Password" required>
@@ -35,20 +35,18 @@
     </div>
 
 <script>
-    var x = document.getElementById(".login")
-    var y = document.getElementById(".signup")
-    var z = document.getElementById(".btn")
+   function signup(){
+    document.querySelector(".input-group.login").style.left="-400px";
+    document.querySelector(".input-group.signup").style.left="50px";
+    document.querySelector(".btn").style.left="110px";
+}
 
-    function signup(){
-        x.style.left="-400px";
-        y.style.left="50px";
-        z.style.left="110px"
-        }
-    function login(){
-        x.style.left="50px";
-        y.style.left="450px";
-        z.style.left="0px"
-        }
+function login(){
+    document.querySelector(".input-group.login").style.left="50px";
+    document.querySelector(".input-group.signup").style.left="450px";
+    document.querySelector(".btn").style.left="0px";
+}
+
 </script>
 
 </body>
